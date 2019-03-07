@@ -7,7 +7,7 @@
         <div id="cabeçalho">
             <div id="banner">
                 <!-- Inserir a figura do banner --> 
-            </div>
+            </div><!-- fim div banner -->
             <div id="menu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -15,7 +15,7 @@
                     <li><a href="#">Categorias de Receitas</a></li>
                     <li><a href="#">Contato</a></li>
                 </ul>
-            </div> 
+            </div><!--Fim div menu-->
             <div id="pesquisa">
                 <p id="redes-sociais">
                     <img src="imagens/facebook.png" />
@@ -26,11 +26,12 @@
                     <input type="search" name="pesquisa" /> 
                     <input type="image" name="lupa" alt"Pesquisar" src="imagens/lupa.png" />
                 </p>
-            </div>
+            </div><!--Fim div links importantes-->
 
-        </div>
+        </div><!--Fim div cabeçalho-->
         <div id="corpo">
-            <h1>Nova Receita</h1>
+            <h1>Nova Receita</h1> 
+            <form action="salvar.jsp" method="post">
             <p><label for="nome">Nome da Receita:
                 <input type="text" name="nome" id="nome" placeholder="Digite o nome da Receita" size="50"/>  
             </label></p> 
@@ -89,10 +90,80 @@
                 </table>
             </p> 
             <p>
-                    <p><label for="modo-preparo">Modo de preparo:
+                    <p>
+                        <label for="modo-preparo">Modo de preparo:
                             <textarea id="modo-preparo" name="modo-preparo" placeholder="Digite o modo de preparo" cols="50" rows="10"></textarea>
-            </p>
-        </div> 
+                        </label>
+            </p> 
+            <p>
+                Dificuldade
+                <input id="facil" type="radio" name="dificuldade" value="f" />
+                <label for="facil">Fácil</label> 
+                <input id="medio" type="radio" name="dificuldade" value="m" />
+                <label for="medio">Médio</label> 
+                <input id="dificil" type="radio" name="dificuldade" value="d" />
+                <label for="dificil">Difícil</label>
+            </p> 
+            <p>
+                Tempo de Preparo: <input type="number" name="tempo-preparo" min="1" />
+                <select name="unidade-tempo">
+                    <option value="min">minutos</option> 
+                    <option value="h">horas</option> 
+                    <option value="d">dias</option>
+                </select>
+            </p> 
+            <p>
+                Rendimentos: <input type="number" name="rendimento" min="1" max="100" />
+                porções
+            </p> 
+                Acompanhamentos: <br /> 
+                <p>
+                <table>
+                    <tr>
+                        <td>
+                            <label>
+                                <input type="checkbox" name="acompanhamentos" value="arroz" /> 
+                                Arroz
+                            </label>
+                        </td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" name="acompanhamentos" value="feijão" /> 
+                                Feijão
+                            </label>
+                        </td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" name="acompanhamentos" value="batata-frita" /> 
+                                Batata Frita
+                            </label>
+                        </td>
+                        <td>
+                            <label>
+                                <input type="checkbox" name="acompanhamentos" value="salada" /> 
+                                Salada
+                            </label>
+                        </td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" name="acompanhamentos" value="doce" />
+                                Batata Doce
+                            </label>
+                        </td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" name="acompanhamentos" value="pure" /> 
+                                Purê de Batata 
+                            </label>
+                        </td>
+                    </tr>
+                </table> 
+                </p> 
+                <p>
+                    <imput type="submit" value="Salvar Receita">
+                </p> 
+                </form>
+        </div><!-- fim div corpo --> 
         <div id="rodapé">
             <p>Desenvolvido por TDS1 - Fiap &copy; 2019</p>
             <p id="redes-sociais">
@@ -100,7 +171,7 @@
                     <img src="imagens/instagram.png" />
                     <img src="imagens/twitter.png" />
             </p> 
-        </div> 
+        </div><!-- fim div rodape -->  
       
     </body>
 </html>
